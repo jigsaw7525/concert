@@ -6,330 +6,1245 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>concert</title>
-    <link rel="stylesheet" href="../static/main.css">
+    <link rel="stylesheet" href="../static/css/main.css">
 </head>
 
-<body>
-    <h2 class="ffff">全台音樂會資訊</h2>
+<body style="position: relative; min-height: 100%; top: 0px;">
+    <div id=all>
 
-    <table border="1">
-        <tbody>
-            <tr>
-                <th>節目名稱</th>
-                {% for title in title1 %}
-                <div id="title">
-                    <td>{{title}}</td>
-                </div>
-                {% endfor %}
-            </tr>
-            <tr>
-                <th>售票處</th>
-                {% for sourceWebName in sourceWebName1 %}
-                <td>{{sourceWebName}}</td>
-                {% endfor %}
-            </tr>
-            <tr>
-                <th>首演日期</th>
-                {% for startDate in startDate1 %}
-                <td>{{startDate}}</td>
-                {% endfor %}
-            </tr>
-            <tr>
-                <th>相關網站</th>
-                {% for site in site1 %}
-                <td><a href="{{site}}">>></a></td>
-                {% endfor %}
-            </tr>
-        </tbody>
-    </table>
+        <h2 class="title">全台音樂會資訊</h2>
 
-    <table border="1">
-        <tbody>
-            <tr>
-                <th>節目名稱</th>
-                {% for title in title2 %}
-                <div id="title">
-                    <td>{{title}}</td>
-                </div>
-                {% endfor %}
-            </tr>
-            <tr>
-                <th>售票處</th>
-                {% for sourceWebName in sourceWebName2 %}
-                <td>{{sourceWebName}}</td>
-                {% endfor %}
-            </tr>
-            <tr>
-                <th>首演日期</th>
-                {% for startDate in startDate2 %}
-                <td>{{startDate}}</td>
-                {% endfor %}
-            </tr>
-            <tr>
-                <th>相關網站</th>
-                {% for site in site2 %}
-                <td><a href="{{site}}">>></a></td>
-                {% endfor %}
-            </tr>
-        </tbody>
-    </table>
+        <div id="sidebar">
+            <h2><img width="25px" height="25px" align="center" src="../static/images/cello.png">關於本平台</h2>
+            <hr style="border:1px dashed color=#290505; height:1px">
+
+            <h3>歡迎來到本網站，這是一個免費臺灣音樂會資訊網站。提供各個管樂團、弦樂團、合唱團等音樂會的資訊、評論、迴響等供分享及聽眾交流，以協助推廣非盈利的樂團及增加曝光的機會。</h3>
 
 
-    <table border="1">
-        <tbody>
-            <tr>
-                <th>節目名稱</th>
-                {% for title in title3 %}
-                <div id="title">
-                    <td>{{title}}</td>
-                </div>
-                {% endfor %}
-            </tr>
-            <tr>
-                <th>售票處</th>
-                {% for sourceWebName in sourceWebName3 %}
-                <td>{{sourceWebName}}</td>
-                {% endfor %}
-            </tr>
-            <tr>
-                <th>首演日期</th>
-                {% for startDate in startDate3 %}
-                <td>{{startDate}}</td>
-                {% endfor %}
-            </tr>
-            <tr>
-                <th>相關網站</th>
-                {% for site in site3 %}
-                <td><a href="{{site}}">>></a></td>
-                {% endfor %}
-            </tr>
-        </tbody>
-    </table>
+            <h2><img width="25px" height="25px" align="center" src="../static/images/banjo.png"> 關注度排行榜</h2>
+            <hr style="border:1px dashed color=#290505; height:1px">
+
+            <img src="../static/images/Gold.png"><a style="font-size: 15px;" href="{{site1}}">{{title1}}</a>
+            <br>
+            <img src="../static/images/Silver.png"><a style="font-size: 15px;" href="{{site2}}">{{title2}}</a>
+            <br>
+            <img src="../static/images/Bronze.png"><a style="font-size: 15px;" href="{{site3}}">{{title3}}</a>
+            <br><br>
+            <a style="font-size: 15px;" href="{{site4}}">{{title4}}</a>
+            <br><br>
+            <a style="font-size: 15px;" href="{{site5}}">{{title5}}</a>
+
+        </div>
+
+        <div id="content">
+
+            <h2><img width="25px" height="25px" align="center" src="../static/images/trumpet.png"> 精選音樂會訊息</h2>
+
+            <!-- 1 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site1}}"><img width="300" src="../static/images/1.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site1}}">{{title1}}</a></b>&nbsp;&nbsp;{{startDate1}}
+                            </p>
+                            <p>{{title1}}<br><br>節目簡介:
+
+                                此場音樂會將帶領大家一起欣賞巴洛克、浪漫時期的音樂。上半場將帶來德國巴洛克的精緻音樂以及北歐挪威民俗色彩的曲目，而下半場則轉為濃厚的法國色彩風格。將由青年小提琴家黃詩雅及知名鋼琴家葉乃菁，為大家帶來浪漫的音樂饗宴。
+                                <br><br>{{locationNames1}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <!-- 2 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site2}}"><img width="300" src="../static/images/2.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site2}}">{{title2}}</a></b>&nbsp;&nbsp;{{startDate2}}
+                            </p>
+                            <p>{{title2}}<br><br>節目簡介:
+
+                                《貓》由音樂劇天王美譽的安德魯·洛伊·韋伯創作，《貓》收錄了音樂劇史上最膾炙人口的歌曲《回憶》，同時以巨大的場景、豐富的編舞及獨特的戲服聞名，《貓》擁有動聽悅耳的音樂與活潑華麗的舞蹈，是絕不可錯過的經典音樂劇代表。
+                                <br><br>{{locationNames2}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <!-- 3 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site3}}"><img width="300" src="../static/images/3.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site3}}">{{title3}}</a></b>&nbsp;&nbsp;{{startDate3}}
+                            </p>
+                            <p>{{title3}}<br><br>節目簡介:
+                                把女兒當作人質只為了換得自己周全的商人，真的只能是諾諾無為嗎?
+                                野獸的咆哮將重新創作經典童話，嵬舞劇場舞蹈團童話系列首支作品將重拳出擊，結合當代舞蹈、五重奏室內樂團及戲劇編排，讓你受到多重的藝術衝擊。
+
+                                <br><br>{{locationNames3}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <!-- 4 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site4}}"><img width="300" src="../static/images/4.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site4}}">{{title4}}</a></b>&nbsp;&nbsp;{{startDate4}}
+                            </p>
+                            <p>{{title4}}<br><br>節目簡介:
+
+                                埔里基督教醫院至今已創立超過一甲子的歲月，從小診所、地區醫院，到現在的區域教學 醫院，隨著時代需要，我們精益求精，讓偏鄉的民眾得到更好的醫療照護。正因過去六十
+                                年中，得到許多的祝福，願上帝用大能的手來幫助我們，實現一切向善的心，成就我們憑 信心所做的工作。敬邀大眾一同聆聽由親愛愛樂演出的好音樂，攜手做公益！用音樂把愛
+                                傳出去，繼續支持埔里基督教醫院在偏鄉地區的醫療與照護工作
+                                <br><br>{{locationNames4}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 5 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site5}}"><img width="300" src="../static/images/5.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site5}}">{{title5}}</a></b>&nbsp;&nbsp;{{startDate5}}
+                            </p>
+                            <p>{{title5}}<br><br>節目簡介:
+                                珍珠般之晶瑩剔透、完美光澤與珍貴獨具！2022知名鋼琴家廖皎含自美返國二十周年隆重鉅獻「淬鍊珍珠」，特邀青年作曲家徐子晴為返國二十年量身創作，以及四位作曲家～巴赫、莫札特、蓋希文與蕭邦之淬煉傑作。感官與心靈的激盪，鋼琴家廖皎含北、中、南巡迴期待與您共度！
+                                <br><br>{{locationNames5}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 6 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site6}}"><img width="300" src="../static/images/6.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site6}}">{{title6}}</a></b>&nbsp;&nbsp;{{startDate6}}
+                            </p>
+                            <p>{{title6}}<br><br>節目簡介:
+                                西灣管樂團創立於西元2020年，由國立中山大學音樂系林鴻君教授擔任常任指揮，團員以中山大學音樂系優秀管樂主修學生及校友，並邀請高雄市民交響管樂團演奏家共同組成。樂團成立的宗旨為定期舉辦不同類型管樂音樂會來推廣高雄藝文活動，此次音樂會以樂團銅管聲部所組成的西灣銅管樂團，演奏多首日本知名作曲家的銅管重奏樂曲及國內知名作曲家侯志正教授作品，期待管樂愛樂者蒞臨欣賞。
+                                <br><br>{{locationNames6}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 7 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site7}}"><img width="300" src="../static/images/7.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site7}}">{{title7}}</a></b>&nbsp;&nbsp;{{startDate7}}
+                            </p>
+                            <p>{{title7}}<br><br>節目簡介:
+                                航運合唱團「情牽四十」演唱會，本次特別選唱了威爾第的精典歌劇「茶花女」中的飲酒歌以及羅大佑組曲、望春風、賣花生等中外民歌選粹。
+                                另外也為喜愛音樂的好朋友們表演不同曲風的原住民及西洋合唱曲。 期盼以豐富的節目內容，生動活潑的伴您共度美好的合唱之夜。
+                                <br><br>{{locationNames7}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 8 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site8}}"><img width="300" src="../static/images/8.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site8}}">{{title8}}</a></b>&nbsp;&nbsp;{{startDate8}}
+                            </p>
+                            <p>{{title8}}<br><br>節目簡介:
+                                Tamino王子和頭目女兒Pamina的愛情故事...
+
+                                當排灣語出現在西方歌劇時會出現什麼火花呢……
+
+                                神秘的屏東排灣族部落，那裡有一座小型石板屋，那是占卜的地方，不能隨意進入，只有執掌占卜儀式的祭司，才可以到那個地方…….
+
+                                來自另一部落的貴族，被怪獸追逐至此地,幸運被靈媒的手下解救後，被大頭目要求解救公主。在通過了冰與火的試煉後，與公主共同迎向神聖正義的光明世界……
+
+                                歌劇魔笛是神童音樂家莫札特家喻戶曉的作品,這次故事場景在屏東原住民排灣族的部落。當主要角色裡的大祭司-Sarastro、王子-Tamino
+                                、公主-Pamina及夜后，變成了Mazazangiljan(大頭目)、vusam(頭目的孩子)、aljak(Pulingav的女兒)及Pulingav(靈媒);
+
+                                當場景轉換成屏東排灣族的石板屋、聚會所及部落遺址;歌手們著排灣族的傳統服飾，說著排灣族語並演唱西方的歌劇，西方文化與部落文化的相互交織碰撞,造就了一齣屏東限定版的歌劇魔笛-【排灣傳奇】
+                                <br><br>{{locationNames8}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 9 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site9}}"><img width="300" src="../static/images/9.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site9}}">{{title9}}</a></b>&nbsp;&nbsp;{{startDate9}}
+                            </p>
+                            <p>{{title9}}<br><br>節目簡介:
+                                在新北市文化局協辦下，台北音樂家管弦樂團為紀念莫扎特逝世230年，策劃以莫扎特膾炙人口的作品為主。著名的管絃樂作品嬉遊曲及小夜曲。以及男高音歌劇詠嘆調【我親愛的寶貝們】、【愛的氣息】、【仁慈的上帝】等。著名的聖樂花腔女高音作品【歡喜讚頌】及【哈利路亞】。以及抒情女高音詠嘆調伯爵夫人的哀嘆【愛情請憐憫我】等。
+                                <br><br>{{locationNames9}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 10 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site10}}"><img width="300" src="../static/images/10.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site10}}">{{title10}}</a></b>&nbsp;&nbsp;{{startDate10}}
+                            </p>
+                            <p>{{title10}}<br><br>節目簡介:
+                                節目在木笛所處的年代─巴洛克音樂為開場，一路遊走至民謠音樂，讓觀眾徜徉在如夢幻般的旋律，享受木笛如黃鶯出谷的聲音。樂曲結合鋼琴、大提琴及各類打擊樂器等演出；演出形式以合奏為主，穿插不同編制的重奏。
+
+                                許多哲學和深刻的情感，都埋在音樂的慢板裡。今年特別以古今中外的浪漫歌曲為主軸，演出曲目除了耳熟能詳的台灣歌謠望春風、雨夜花、月夜愁等，並精選國外如歌的浪漫樂曲：巴海貝爾的卡農、巴赫的第二號布蘭登堡協奏曲─第二樂章、貝多芬的第七號交響曲第二樂章、孟德爾頌的第四號交響曲第二樂章(如歌的行板)……，在音樂聲中，優遊自在！
+                                <br><br>{{locationNames10}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 11 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site11}}"><img width="300" src="../static/images/11.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site11}}">{{title11}}</a></b>&nbsp;&nbsp;{{startDate11}}
+                            </p>
+                            <p>{{title11}}<br><br>節目簡介:
+                                做自己！為堅持獨特而踏實
+
+                                張開翅膀，等待風起！
+
+                                台灣音樂藝術才能教育制度培育下的優秀年輕學子，學習打擊樂多年的雙胞胎姊妹，用「雙擊」為主題，將創新多元融合傳統東方與現代西方的音樂元素和文化美學；以打擊樂的劇場性與故事特質，引領觀眾聚焦在音樂舞台上。
+                                <br><br>{{locationNames11}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 12 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site12}}"><img width="300" src="../static/images/12.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site12}}">{{title12}}</a></b>&nbsp;&nbsp;{{startDate12}}
+                            </p>
+                            <p>{{title12}}<br><br>節目簡介:
+                                學音樂的過程太辛苦了，
+                                想要尋求學習「捷徑」的Eric買了《有夠完美鋼琴老師》，
+                                一款據說可以變換各種教學風格的機器人老師，
+                                這個商品裡的老師簡直包羅萬象，應有盡有！
+                                但是......
+                                按部就班，他嫌進度太慢。
+                                天馬行空，他嫌不夠嚴謹。
+                                嚴格執行，他嫌太過辛苦。
+                                不能面對挫折與自省的Eric憤而將遙控器摔爛！
+                                但是摔爛之後卻發生了神奇的事情⋯⋯
+
+                                到底最後能不能挽回一個想放棄的心靈？
+
+                                《有夠完美鋼琴老師》讓你知道：
+                                完美不存在，
+                                但是不完美有不完美的姿態，
+                                無論完美不完美，
+                                都很美。
+                                <br><br>{{locationNames12}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 13 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="https://godot.org.tw/web/5mins/"><img width="300"
+                                    src="../static/images/13.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a
+                                        href="https://godot.org.tw/web/5mins/">{{title13}}</a></b>&nbsp;&nbsp;{{startDate13}}
+                            </p>
+                            <p>{{title13}}<br><br>節目簡介:
+                                關於遺憾，如果你有一首歌的時間…
+                                熱愛音樂的粗心死神誤殺了命不該絕的John，為了彌補疏失，死神答應他「穿越時空改變錯誤」的願望。當特定的音樂響起，只有短短的五分鐘，John穿梭時空遇見與自己相像的中學生！人生真的能重來？
+
+                                關於人生，愛讓一切有意義…
+                                一封前女友捎來的喜帖，喚起John深埋難解的心結與自責…如何再次面對錯過的真愛？一次次的穿越與相處，John實在難以開口告訴青年：你所期盼的未來，你我的人生、夢想，會是一連串的錯誤與徒勞….
+
+                                夢想 愛情 現實
+                                用音樂治癒生命缺憾
+                                <br><br>{{locationNames13}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 14 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site14}}"><img width="300" src="../static/images/14.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site14}}">{{title14}}</a></b>&nbsp;&nbsp;{{startDate14}}
+                            </p>
+                            <p>{{title14}}<br><br>節目簡介:
+                                運用中國傳統樂器舞動音符、呈現多元音樂融合生活，昇華生命價值觀，激發生活正能量；生活與音樂共舞，二十世紀新時代；音樂美學是淨化心身靈的抗壓劑。孔子在論語述而篇所云：「志於道，據於德，依於仁，遊於藝」。短短十二個字、道盡人其一生說長不長、說短不短、擁有以上四件事就夠了。《弦箏心曲》遊藝音樂『知、受、演、養』在音符中豐富生命找回健康、幸福、快樂、自信、孕育出健康自信的下一代。
+
+                                <br><br>{{locationNames14}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 15 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a
+                                href="https://www.afmc.gov.tw/Activity_detail/a3b9cfef81f44986864f04cb7f705b7b?start=2022%2F02%2F15&end=2022%2F08%2F16"><img
+                                    width="300" src="../static/images/15.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a
+                                        href="https://www.afmc.gov.tw/Activity_detail/a3b9cfef81f44986864f04cb7f705b7b?start=2022%2F02%2F15&end=2022%2F08%2F16">{{title15}}</a></b>&nbsp;&nbsp;{{startDate15}}
+                            </p>
+                            <p>{{title15}}<br><br>節目簡介:
+                                【台灣風情-從鄉土到現代】是以台灣各地美景進行深入瞭解，並由鄉土到現代透過專業的創作群對於各場音樂的編作，以傳統音樂之展現，注入現代意象之創作，重新詮釋台灣各地風情，並賦予新的風貌與生命
+                                <br><br>{{locationNames15}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 16 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a
+                                href="https://data.zhupiter.com/oddt/11718497/2022%E6%A1%83%E5%9C%92%E8%97%9D%E8%A1%93%E5%B7%A1%E6%BC%94-%E8%87%BA%E5%8C%97%E7%88%B5%E5%A3%AB%E5%A4%A7%E6%A8%82%E9%9A%8A%E4%B8%80%E8%B5%B7%E4%BE%86%E6%90%96%E6%93%BA/"><img
+                                    width="300" src="../static/images/16.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a
+                                        href="https://data.zhupiter.com/oddt/11718497/2022%E6%A1%83%E5%9C%92%E8%97%9D%E8%A1%93%E5%B7%A1%E6%BC%94-%E8%87%BA%E5%8C%97%E7%88%B5%E5%A3%AB%E5%A4%A7%E6%A8%82%E9%9A%8A%E4%B8%80%E8%B5%B7%E4%BE%86%E6%90%96%E6%93%BA/">{{title16}}</a></b>&nbsp;&nbsp;{{startDate16}}
+                            </p>
+                            <p>{{title16}}<br><br>節目簡介:
+                                本場活動邀請臺北爵士大樂隊擔綱演出，演出內容分為「傳統大樂團曲目」及「國語改編爵士版」二大方向。傳統大樂團曲目中除了Second Cousins、Fire in the
+                                Furnace等經典名曲之外，更添加耳熟能詳Unforgettable、Quendo, Quando,
+                                Quando等曲目，經典中的經典，帶你進入時光隧道，重回30年代風靡於世的搖擺國度裡。此外，也特別改編多首經典民謠成爵士版本，熟悉旋律披上爵士新衣，完全感受不同於往的樂曲風情，邀請知名歌手潘越雲帶來經典民歌「守著陽光守著你」、「野百合也有春天」等曲目，男女爵士歌手Thomas及Angel接力輪唱，精彩內容，邀請各年齡層觀眾「一起來搖擺」
+                                <br><br>{{locationNames16}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 17 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a
+                                href="https://data.zhupiter.com/oddt/11711622/2022%E6%98%A5%E4%B9%8B%E6%A8%82-%E5%AD%B8%E7%94%9F%E9%9F%B3%E6%A8%82%E6%88%90%E6%9E%9C%E7%99%BC%E8%A1%A8%E6%9C%83"><img
+                                    width="300" src="../static/images/17.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a
+                                        href="https://data.zhupiter.com/oddt/11711622/2022%E6%98%A5%E4%B9%8B%E6%A8%82-%E5%AD%B8%E7%94%9F%E9%9F%B3%E6%A8%82%E6%88%90%E6%9E%9C%E7%99%BC%E8%A1%A8%E6%9C%83">{{title17}}</a></b>&nbsp;&nbsp;{{startDate17}}
+                            </p>
+                            <p>{{title17}}<br><br>節目簡介:
+                                為了提升孩子的學習能力及培養孩子更多舞台經驗,特此舉辦學生成果發表會,透過正式的舞台及環境,在表演過程也讓孩子學習觀賞音樂會禮儀及素養。 2022春之樂 學生音樂成果發表會
+                                節目單
+                                1.曾若蕎、吴爵伃 Libertango for four hands A.Piazzolla【四手聯彈】 2.吳昕潔 小狗圓舞曲 蕭邦 3.馬朵希 小喇叭小夜曲 史賓德勒
+                                4.李函家
+                                騎士羅伯 舒曼 5.曾榆容 清流 佈爾格彌勒 6.曹甯妃 溜冰圓舞曲 華爾特特依菲爾 7.蔡亦恩 一・二・森巴 8.林宸旭 學生協奏曲第五號第一樂章 賽茲【小提琴】 9.曾秉謙
+                                小蜜蜂
+                                10·曾詠太 森林音樂會 丸田信明 11.張芊睿 嗶嗶歌 12.鍾睿紳 劍龍之舞 13.謝守恩 獵人之歌 14.黃榆絜 天黑黑 馬水龍編曲 15·廖乙恬 星笛、淚光閃閃
+                                日本曲【直笛】
+                                16·曾曉丹 化成風(貓的報恩)
+                                <br><br>{{locationNames17}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 18 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site18}}"><img width="300" src="../static/images/18.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site18}}">{{title18}}</a></b>&nbsp;&nbsp;{{startDate18}}
+                            </p>
+                            <p>{{title18}}<br><br>節目簡介:
+                                傑出青年長笛演奏家高佳君，近年來以獨奏與室內樂演出活躍於舞台，不僅傳承了長笛原有迷人的優雅氣息，更帶來屬於新世代音樂家的青春活力。繼 2020年演出「高佳君長笛獨奏會—笛光片羽
+                                Dust of
+                                Time」之後，有別於以往的獨奏與室內樂演出，2022年將以長笛與鋼琴的二重奏形式，帶來貝托米爾、德岡直樹、穆欽斯基、法朗克、波恩等經典長笛作品，給愛樂朋友最純粹長笛音樂之美。此外，本計畫另將特別邀請鋼琴家林娟儀一同帶來演出，相信本次巡迴將是一場精采可期的音樂饗宴。
+                                <br><br>{{locationNames18}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 19 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site19}}"><img width="300" src="../static/images/19.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site19}}">{{title19}}</a></b>&nbsp;&nbsp;{{startDate19}}
+                            </p>
+                            <p>{{title19}}<br><br>節目簡介:
+                                「詠嘆調大提琴四重奏」擁有絕佳默契，挑戰音色變化及聲部色彩的極限。邀請劉姝嫥教授合作經典的德佛札克大提琴協奏曲，呈現提琴精緻且溫暖的絕美面貌！
+
+                                四位大提琴家周尚樺、邱奕勳、葉書瑋、廖致雅，因絕佳默契與自然契合的音色想法，成立以「詠嘆調」為名的大提琴四重奏團，從經典樂曲出發，呈現大提琴重奏的絕美面貌。更邀請知名大提琴家劉姝嫥教授，一同合作龐大且磅礴的《德佛札克B小調大提琴協奏曲》。四把大提琴剛剛好的編制，精緻且溫暖，演奏家們皆具有豐富的演出經驗，挑戰大提琴音色變化及聲部色彩的極限。曲目橫跨古典、浪漫、近代及民族音樂，結合大提琴的悠揚動人、圓融渾厚、饒富變化的和聲穿梭交織。
+                                <br><br>{{locationNames19}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 20 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a
+                                href="https://data.zhupiter.com/oddt/11711673/%E4%B8%80%E8%B5%B7%E4%BE%86%E5%94%B1%E6%AD%8C%E5%90%A73/"><img
+                                    width="300" src="../static/images/20.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a
+                                        href="https://data.zhupiter.com/oddt/11711673/%E4%B8%80%E8%B5%B7%E4%BE%86%E5%94%B1%E6%AD%8C%E5%90%A73/">{{title20}}</a></b>&nbsp;&nbsp;{{startDate20}}
+                            </p>
+                            <p>{{title20}}<br><br>節目簡介:
+                                2022年愛唱歌手《 一起來唱歌吧3》聯合成果發表音樂會 由愛唱歌手合唱子團、愛唱小歌手合唱團、愛唱悠活合唱團暨包酷哼歌手合唱團聯合演出 演出曲目: 包酷哼:Dona
+                                Nobis
+                                Pacem、群青、有閒無閒、月光光 小歌手:今年夏天、學貓叫、Christmas Kum Ba Ya、地球的孩子 悠活團:快樂天堂、阿爸、思念阿母、我喜歡
+                                期盼用歌聲療癒人心，同時在推廣合唱藝術不遺餘力，能在眾口齊聲的歡唱中，營造和諧優美的社會氛圍。
+                                <br><br>{{locationNames20}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!--21 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site21}}"><img width="300" src="../static/images/21.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site21}}">{{title21}}</a></b>&nbsp;&nbsp;{{startDate21}}
+                            </p>
+                            <p>{{title21}}<br><br>節目簡介:
+                                BrassMen成立三年來第一場原創作品音樂會，由初期BrassMen介紹樂器與團員之橋段延伸發想，我們創作了一套專為BrassMen樂器與團員設計的完整曲目。
+
+                                不同於平時風趣主持搭配演奏與觀眾互動的風格，此次的節目將透過更純粹的音樂本身，引領聽眾進入精彩豐富的器樂世界。多首風格相異的曲目包含了精彩的獨奏、重奏、合奏與競奏橋段，現場的氣氛將一觸即發！今夜究竟誰當家？就等您一同來挖掘答案！
+                                <br><br>{{locationNames21}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 22 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site2}}"><img width="300" src="../static/images/22.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site22}}">{{title22}}</a></b>&nbsp;&nbsp;{{startDate22}}
+                            </p>
+                            <p>{{title22}}<br><br>節目簡介:
+                                愛唱歌手自2013起每年規劃「因愛而唱」音樂會，今已來到第八年。回顧過去，我們每年執著於自我挑戰，始終秉持幾個原則：
+
+                                1. 每年深入研究一部彌撒，作曲家包含莫札特、古諾、布魯克納、約翰盧特、舒伯特、羅西尼。今年我們將深入研究義大利歌劇大師普契尼的宗教作品《光榮彌撒》。
+
+                                2. 支持原創作品，邀請美國作曲家David McHugh寫作《The Day The Flowers
+                                Left》、台灣作曲家劉聖賢寫作《給大自然的六首詩》、林明杰寫作《福爾摩沙彌撒》，並完成世界首演。今年，我們也將演唱改編自張雨生的三首歌曲，以紀念這位台灣流行音樂不朽的巨星。
+
+                                3. 關懷人群與環境，除了每年音樂會企畫相關主題之外，愛唱歌手也致力參與社會公益，將音樂會結餘款項全數捐出，奉獻給社會上有需要幫助的朋友們。
+
+                                合唱能做什麼？合唱能使人抒發情感，美妙的和聲更能帶給歌者與聽者身心的療癒。如同愛唱歌手創團團長李晏誠說的：「合唱令人如癡如醉的魅力，讓歌手願意將自己騰空出來進入它的世界，洗滌因世俗而疲累的心。」
+
+                                因此，我們希望藉由每次認真的研究，與不斷精進的演唱，讓更多音樂愛好者可以領略合唱的美好，以及作曲家的情感流露。
+                                <br><br>{{locationNames22}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 23 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site23}}"><img width="300" src="../static/images/23.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site23}}">{{title23}}</a></b>&nbsp;&nbsp;{{startDate23}}
+                            </p>
+                            <p>{{title23}}<br><br>節目簡介:
+                                2022巴雀Camerata Taiwan《無垠》，將從我們身處的時空—台灣當代音樂啟程。
+
+                                台灣當代創作展現了屬於我們的時代精神，而這也將成為未來台灣的「古典」經典。
+
+                                音樂會將一次帶來兩首《變形》作品—台灣青年作曲家林佳瑩及理查．史特勞斯的經典作品。接著聆聽當代優秀作曲家法比安．穆勒的《組曲》，穆勒的作品常融合現代與傳統的手法，而此首以瑞士風景為題，為妻子台灣大提琴家簡碧青所創作。最後帶來旅歐音樂家彭靖，受淡水夜景的優美景緻吸引完成的《雙大提琴協奏曲》，表達我們對台灣人文的情感與珍惜。
+                                <br><br>{{locationNames23}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 24 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site24}}"><img width="300" src="../static/images/24.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site24}}">{{title24}}</a></b>&nbsp;&nbsp;{{startDate24}}
+                            </p>
+                            <p>{{title24}}<br><br>節目簡介:
+                                新生代青年鋼琴合作家楊芹芝與葉芷岑及旅美鋼琴家吳明靜，將帶來多首雙鋼琴、四手聯彈及六手聯彈曲目，帶領聽眾們享受一場聽覺的奇幻旅程。
 
 
-    <table border="1">
-        <tbody>
-            <tr>
-                <th>節目名稱</th>
-                {% for title in title4 %}
-                <div id="title">
-                    <td>{{title}}</td>
-                </div>
-                {% endfor %}
-            </tr>
-            <tr>
-                <th>售票處</th>
-                {% for sourceWebName in sourceWebName4 %}
-                <td>{{sourceWebName}}</td>
-                {% endfor %}
-            </tr>
-            <tr>
-                <th>首演日期</th>
-                {% for startDate in startDate4 %}
-                <td>{{startDate}}</td>
-                {% endfor %}
-            </tr>
-            <tr>
-                <th>相關網站</th>
-                {% for site in site4 %}
-                <td><a href="{{site}}">>></a></td>
-                {% endfor %}
-            </tr>
-        </tbody>
-    </table>
+                                曲目設計涵蓋浪漫樂派、國民樂派及融合古典與爵士風格的新探戈音樂，多元的曲風帶領聽眾們進入一場奇幻旅程。
+                                以德佛札克帶有波西米亞風格的《斯拉夫舞曲》揭開序幕；接續為阿聯斯基《雙鋼琴組曲》，為聽眾帶來聽覺上的刺激及趣味性。本場音樂會特邀南藝大鋼琴合作所吳明靜教授共同演繹拉赫曼尼諾夫的作品《兩首六手聯彈小品》。另一首拉赫曼尼諾夫曲目為美國知名聯彈組合Anderson&Roe改編之聯彈作品《無言歌》，尾聲帶來具爵士風格的皮耶佐拉《布宜諾斯艾利斯芭蕾組曲》，熱情奔放的樂音為節目劃下句點
+                                <br><br>{{locationNames24}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
 
+            <!-- 25 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site25}}"><img width="300" src="../static/images/25.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site25}}">{{title25}}</a></b>&nbsp;&nbsp;{{startDate25}}
+                            </p>
+                            <p>{{title25}}<br><br>節目簡介:
+                                國立臺灣交響樂團邀請楊照策劃講座音樂會，本系列由作家楊照策劃及講解，介紹古典音樂的女性作曲家，共規劃4場次，分別介紹芬妮‧孟德爾頌Fanny
+                                Mendelssohn、克拉拉．舒曼Clara Schumann，以及較不為人知的英國中提琴家兼作曲家麗貝卡‧克拉克Rebecca
+                                Clarke與美國作曲家兼鋼琴家比奇夫人Amy
+                                Beach。
+                                <br><br>{{locationNames25}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
 
-    <table border="1">
-        <tbody>
-            <tr>
-                <th>節目名稱</th>
-                {% for title in title5 %}
-                <div id="title">
-                    <td>{{title}}</td>
-                </div>
-                {% endfor %}
-            </tr>
-            <tr>
-                <th>售票處</th>
-                {% for sourceWebName in sourceWebName5 %}
-                <td>{{sourceWebName}}</td>
-                {% endfor %}
-            </tr>
-            <tr>
-                <th>首演日期</th>
-                {% for startDate in startDate5 %}
-                <td>{{startDate}}</td>
-                {% endfor %}
-            </tr>
-            <tr>
-                <th>相關網站</th>
-                {% for site in site5 %}
-                <td><a href="{{site}}">>></a></td>
-                {% endfor %}
-            </tr>
-        </tbody>
-    </table>
+            <!-- 26 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site26}}"><img width="300" src="../static/images/26.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site26}}">{{title26}}</a></b>&nbsp;&nbsp;{{startDate26}}
+                            </p>
+                            <p>{{title26}}<br><br>節目簡介:
+                                在台北國家音樂廳，盡情欣賞由眾多當代傑出的獨奏、獨唱家，與故鄉室內樂團一起演出、展現古今名曲無比的魅力，是人生難得的珍貴體驗。故鄉室內樂團的音樂會不但與眾不同，而且經常邀請傑出音樂家在獨奏、獨唱及與樂團共演的各領域中，盡情發揮其天賦與所長。
+                                <br><br>{{locationNames26}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
 
+            <!-- 27 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site27}}"><img width="300" src="../static/images/27.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site27}}">{{title27}}</a></b>&nbsp;&nbsp;{{startDate27}}
+                            </p>
+                            <p>{{title27}}<br><br>節目簡介:
 
-    <table border="1">
-        <tbody>
-            <tr>
-                <th>節目名稱</th>
-                {% for title in title6 %}
-                <div id="title">
-                    <td>{{title}}</td>
-                </div>
-                {% endfor %}
-            </tr>
-            <tr>
-                <th>售票處</th>
-                {% for sourceWebName in sourceWebName6 %}
-                <td>{{sourceWebName}}</td>
-                {% endfor %}
-            </tr>
-            <tr>
-                <th>首演日期</th>
-                {% for startDate in startDate6 %}
-                <td>{{startDate}}</td>
-                {% endfor %}
-            </tr>
-            <tr>
-                <th>相關網站</th>
-                {% for site in site6 %}
-                <td><a href="{{site}}">>></a></td>
-                {% endfor %}
-            </tr>
-        </tbody>
-    </table>
+                                備受國際樂壇矚目的五位臺灣音樂家：鋼琴家汪奕聞、小提琴家魏靖儀與陳瑾瑒、中提琴家蔡⼠賢、大提琴家柯容軒，各懷精湛的音樂技巧與個人風格，首次聯手合奏。音樂會將演繹四位突破傳統框架的作曲家作品，以感性⽽浪漫的風格詮釋，注入當代思維的註腳，呈現室內樂豐富的聲響色彩。在致敬經典的同時，音樂家更自由揮灑，展現迷人奔放的生命力。這是屬於這世代的音樂哲學，始於勇敢，或是叛逆，演奏家和作曲家們持續用音樂狂想，這股能量將會延綿不止。
+                                <br><br>{{locationNames27}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
 
+            <!-- 28 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site28}}"><img width="300" src="../static/images/28.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site28}}">{{title28}}</a></b>&nbsp;&nbsp;{{startDate28}}
+                            </p>
+                            <p>{{title28}}<br><br>節目簡介:
+                                一把自臺灣發出聲響的琵琶，究竟承襲多少漢文化的人文古典？作為傳統樂器，又如何在現今展現琵琶在歷史中積醞的能量？
 
-    <table border="1">
-        <tbody>
-            <tr>
-                <th>節目名稱</th>
-                {% for title in title7 %}
-                <div id="title">
-                    <td>{{title}}</td>
-                </div>
-                {% endfor %}
-            </tr>
-            <tr>
-                <th>售票處</th>
-                {% for sourceWebName in sourceWebName7 %}
-                <td>{{sourceWebName}}</td>
-                {% endfor %}
-            </tr>
-            <tr>
-                <th>首演日期</th>
-                {% for startDate in startDate7 %}
-                <td>{{startDate}}</td>
-                {% endfor %}
-            </tr>
-            <tr>
-                <th>相關網站</th>
-                {% for site in site7 %}
-                <td><a href="{{site}}">>></a></td>
-                {% endfor %}
-            </tr>
-        </tbody>
-    </table>
+                                《擺度之外》是鍾玉鳳的主創計畫，關注古典在當代流動的樣貌，以原創作曲串接世界多元的音樂語彙，呈現琵琶獨有的混血性格，並與不同文化背景的臺灣音樂家相互激盪，更特別邀請重量級泰雅族音樂家雲力思跨界發聲。
 
+                                鍾玉鳳的音樂美學，不同於國樂交響化、唱片工業刻板的抒情樣貌，展現琵琶豐沛的創造性，重新度量音樂的節奏，在保存與背離古典的過程中，繼續她在音樂裡精準與自由的追尋。
+                                <br><br>{{locationNames28}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
 
-    <table border="1">
-        <tbody>
-            <tr>
-                <th>節目名稱</th>
-                {% for title in title8 %}
-                <div id="title">
-                    <td>{{title}}</td>
-                </div>
-                {% endfor %}
-            </tr>
-            <tr>
-                <th>售票處</th>
-                {% for sourceWebName in sourceWebName8 %}
-                <td>{{sourceWebName}}</td>
-                {% endfor %}
-            </tr>
-            <tr>
-                <th>首演日期</th>
-                {% for startDate in startDate8 %}
-                <td>{{startDate}}</td>
-                {% endfor %}
-            </tr>
-            <tr>
-                <th>相關網站</th>
-                {% for site in site8 %}
-                <td><a href="{{site}}">>></a></td>
-                {% endfor %}
-            </tr>
-        </tbody>
-    </table>
+            <!-- 29 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site29}}"><img width="300" src="../static/images/29.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site29}}">{{title29}}</a></b>&nbsp;&nbsp;{{startDate29}}
+                            </p>
+                            <p>{{title29}}<br><br>節目簡介:
+                                本場演出臺灣作曲家游昌發的經典曲目《蛇郎君組曲》，講述巴冷公主與百步蛇王之戀，經管絃樂團豐富語彙道出魯凱的美麗傳說。音樂會亦將演出1957年莫斯科音樂院畢業音樂會上，蕭斯塔科維契之子彈奏父親送他的19歲生日禮物－第二號鋼琴協奏曲，在作曲家精練筆下，父子間的溫情和幽默，在音樂中表露無遺。
 
+                                同樣於1957年的莫斯科，世人初次聽見柴科夫斯基的未竟之作－降Ｅ大調交響曲，由俄國音樂學兼作曲家 S. Bogatyrev
+                                歷時數年重整完成，這首曾被柴氏期許為他創作生涯的巔峰之作，將在臺灣首次演出，意義非凡，不容錯過。
+                                <br><br>{{locationNames29}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
 
-    <table border="1">
-        <tbody>
-            <tr>
-                <th>節目名稱</th>
-                {% for title in title9 %}
-                <div id="title">
-                    <td>{{title}}</td>
-                </div>
-                {% endfor %}
-            </tr>
-            <tr>
-                <th>售票處</th>
-                {% for sourceWebName in sourceWebName9 %}
-                <td>{{sourceWebName}}</td>
-                {% endfor %}
-            </tr>
-            <tr>
-                <th>首演日期</th>
-                {% for startDate in startDate9 %}
-                <td>{{startDate}}</td>
-                {% endfor %}
-            </tr>
-            <tr>
-                <th>相關網站</th>
-                {% for site in site9 %}
-                <td><a href="{{site}}">>></a></td>
-                {% endfor %}
-            </tr>
-        </tbody>
-    </table>
+            <!-- 30 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site30}}"><img width="300" src="../static/images/30.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site30}}">{{title30}}</a></b>&nbsp;&nbsp;{{startDate30}}
+                            </p>
+                            <p>{{title30}}<br><br>節目簡介:
+                                每個生命、物質都有其獨特性，鄭伊里在《感質》中，探究生命感知及多元個體的覺察，企圖觸發觀者思考尊重生命個體。
 
+                                演出透過「介質裝置」、「即時電聲」和「表演者肢體質地」，融合歌劇院建築核心元素：光、空氣、水，打造多層次電聲裝置系統，依表演者的肢體觸碰即時引動現場電聲反饋，融合光影互動，創作出極具視聽效果的電聲肢體劇場，喚醒觀者的感官意識。
 
-    <table border="1">
-        <tbody>
-            <tr>
-                <th>節目名稱</th>
-                {% for title in title10 %}
-                <div id="title">
-                    <td>{{title}}</td>
-                </div>
-                {% endfor %}
-            </tr>
-            <tr>
-                <th>售票處</th>
-                {% for sourceWebName in sourceWebName10 %}
-                <td>{{sourceWebName}}</td>
-                {% endfor %}
-            </tr>
-            <tr>
-                <th>首演日期</th>
-                {% for startDate in startDate10 %}
-                <td>{{startDate}}</td>
-                {% endfor %}
-            </tr>
-            <tr>
-                <th>相關網站</th>
-                {% for site in site10 %}
-                <td><a href="{{site}}">>></a></td>
-                {% endfor %}
-            </tr>
-        </tbody>
-    </table>
+                                作品共分為六個樂章：
 
+                                序、逆生樹─從天蔓生至地表的植物支脈，探尋地心引力與生命成長的延續性。
+
+                                一、地─一切生命由「土地」展開，從泥土下萌芽探出。
+
+                                二、醒─環境的刺激開始讓身體甦醒，逐漸離開地面並學習起身。
+
+                                三、霧─在雲霧間尋找光點，暗喻著生命體的向光性與個體意識。
+
+                                四、光影─光與影為互補的存在，肢體經由光照而產生影子，而影子更清晰展現了個體的獨特質地。
+
+                                五、水─生命融合一切感知，回到生生不息的源頭。
+                                <br><br>{{locationNames30}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 31 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site31}}"><img width="300" src="../static/images/31.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site31}}">{{title31}}</a></b>&nbsp;&nbsp;{{startDate31}}
+                            </p>
+                            <p>{{title31}}<br><br>節目簡介:
+                                惱人的客戶、繁雜的家務、枯燥的課業…滲透生活的鳥人鳥事，將人推向厭世新境界；防疫期間日復一日的孤獨自處、足不出戶，令人煩悶到招架不住。需要被療癒嗎？讓衛武營小時光與策展人黃韻玲開立一帖神奇、零副作用的音樂處方，化解你的厭世與煩悶。2022年，衛武營特邀臺北流行音樂中心董事長黃韻玲策劃一場多元的音樂饗宴。無論是純粹演唱或是跨域結合，讓音樂的多元面貌療癒你的心靈。
+                                <br><br>{{locationNames31}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 31 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site31}}"><img width="300" src="../static/images/31.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site31}}">{{title31}}</a></b>&nbsp;&nbsp;{{startDate31}}
+                            </p>
+                            <p>{{title31}}<br><br>節目簡介:
+                                惱人的客戶、繁雜的家務、枯燥的課業…滲透生活的鳥人鳥事，將人推向厭世新境界；防疫期間日復一日的孤獨自處、足不出戶，令人煩悶到招架不住。需要被療癒嗎？讓衛武營小時光與策展人黃韻玲開立一帖神奇、零副作用的音樂處方，化解你的厭世與煩悶。2022年，衛武營特邀臺北流行音樂中心董事長黃韻玲策劃一場多元的音樂饗宴。無論是純粹演唱或是跨域結合，讓音樂的多元面貌療癒你的心靈。
+                                <br><br>{{locationNames31}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 32 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site32}}"><img width="300" src="../static/images/32.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site32}}">{{title32}}</a></b>&nbsp;&nbsp;{{startDate32}}
+                            </p>
+                            <p>{{title32}}<br><br>節目簡介:惱人的客戶、繁雜的家務、枯燥的課業…滲透生活的鳥人鳥事，將人推向厭世新境界；防疫期間日復一日的孤獨自處、足不出戶，令人煩悶到招架不住。需要被療癒嗎？讓衛武營小時光與策展人黃韻玲開立一帖神奇、零副作用的音樂處方，化解你的厭世與煩悶。2022年，衛武營特邀臺北流行音樂中心董事長黃韻玲策劃一場多元的音樂饗宴。無論是純粹演唱或是跨域結合，讓音樂的多元面貌療癒你的心靈。
+
+                                白天任教、夜晚創作的楊肅浩，首次推出專輯《噶瑪蘭的風吹》便入圍第32屆金曲獎最佳臺語男歌手。雖然這張專輯以蘭陽平原上的人事物為創作核心，楊肅浩一首接著一首唱出了許多島民對家的想像、渴望與關懷。凝練的台語詩詞，承載一世紀的時代更迭，迎著穿透人心的民謠曲風，宛如一只風箏俯視這塊土地。讓我們在小時光裡，乘上那時代的洪流，重訪記憶中珍藏的歸屬。
+
+                                <br><br>{{locationNames32}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 33 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site33}}"><img width="300" src="../static/images/33.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site33}}">{{title33}}</a></b>&nbsp;&nbsp;{{startDate33}}
+                            </p>
+                            <p>{{title33}}<br><br>節目簡介:
+                                惱人的客戶、繁雜的家務、枯燥的課業…滲透生活的鳥人鳥事，將人推向厭世新境界；防疫期間日復一日的孤獨自處、足不出戶，令人煩悶到招架不住。需要被療癒嗎？讓衛武營小時光與策展人黃韻玲開立一帖神奇、零副作用的音樂處方，化解你的厭世與煩悶。2022年，衛武營特邀臺北流行音樂中心董事長黃韻玲策劃一場多元的音樂饗宴。無論是純粹演唱或是跨域結合，讓音樂的多元面貌療癒你的心靈。
+                                <br><br>{{locationNames33}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 34 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site34}}"><img width="300" src="../static/images/34.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site34}}">{{title34}}</a></b>&nbsp;&nbsp;{{startDate34}}
+                            </p>
+                            <p>{{title34}}<br><br>節目簡介:
+                                (日)PM1500至PM1700
+                                <br><br>{{locationNames34}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 35 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site35}}"><img width="300" src="../static/images/35.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site35}}">{{title35}}</a></b>&nbsp;&nbsp;{{startDate35}}
+                            </p>
+                            <p>{{title35}}<br><br>節目簡介:
+                                這是一個來自未來的故事，一場大地震，把台灣、香港、馬來西亞的一小部分一路甩到了南海無人看管之處。來自數個不同區域的人民散落在形同碎片般的城鎮，曾經的一切跟現在相差甚遠，新的生活樣貌正等待著大家去建立；但文化與習慣上的不同成了大家和睦相處的夥伴。
+                                小島的未來與過去在故事中彼此交融，時間的催化讓原本支離破碎的小島有了一線生機,見證了短短六年間小島上奇妙的緣分，因此改變了彼此的未來，島上的一切重新復甦與融合，在小島上的人們漸漸的生成自己的土地意識。
+                                <br><br>{{locationNames35}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 36 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site36}}"><img width="300" src="../static/images/36.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site36}}">{{title36}}</a></b>&nbsp;&nbsp;{{startDate36}}
+                            </p>
+                            <p>{{title36}}<br><br>節目簡介:
+
+                                精選九部百老匯經典音樂劇配樂，網羅《歌劇魅影》、《悲慘世界》、《媽媽咪呀》、《貓》、《美女與野獸》、《獅子王》、《綠野仙蹤》、《西城故事》...等知名劇碼，經典薈萃一次呈現！透過狂美精湛的演繹、桂冠級的專業導聆，絕對能滿足您挑剔的耳朵。讓我們穿越太平洋，感受百老匯的璀璨風華與萬般風情。
+                                <br><br>{{locationNames36}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 37 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site37}}"><img width="300" src="../static/images/37.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site37}}">{{title37}}</a></b>&nbsp;&nbsp;{{startDate37}}
+                            </p>
+                            <p>{{title37}}<br><br>節目簡介:
+
+                                他，暖男書呆寧采臣；她，嬌俏幽魂聶小倩；他，除妖劍客燕赤霞，詭祕難辨的蘭若寺將他們連結在一起。妖霧瀰漫中，他對她，是愛情還是同情？他對他，是敬畏還是渴求？
+
+                                電影《倩女幽魂》浪漫淒美的人鬼生死戀，勾勒多少癡情風月。到了戲曲舞臺，聶小倩、寧采臣、燕赤霞等人，又將變成什麼模樣？寧采臣迷途時，有好心人指引正路，像是俏皮可愛的小倩姑娘，或是任俠好義的赤霞大哥，不妙的是，正路不走偏向妖道行，分不清東南西北之際……誰能搭救他平安下山？聶小倩心儀采臣、不願他魂斷異鄉，姥姥卻一再進逼，該如何留住這份純愛。當妖霧揚起，燕赤霞內心沉睡的貪戀脫閘而出，他是否能正常發揮、頑強抵抗？
+
+                                蘭若寺內，生死一瞬……唯願君心同我心？
+
+                                山林深處蘭若寺內，住著千年樹妖。無形無體，凡有旅人，在寺中吸入妖氣，產生幻覺。幻覺映出其內心的欲念，樹妖則投其所好，將之迷惑，吸其精血增加道行。除魔者燕赤霞，自幼修道，內心清澈無欲無求，進入寺中斬妖除魔。書生寧采臣則是在山中迷路，進入寺中，遇到樹妖手下的妖女聶小倩。聶小倩對寧采臣有好感，勸寧采臣投靠同在寺中投宿的除魔者燕赤霞，若能與燕赤霞共度一宿，也許能躲過樹妖魔掌，撐過天明速速離寺。是夜，妖氣瀰漫，小倩擔心寧采臣受害，卻看到采臣吸入妖氣後，映照出內心的欲望是燕赤霞。大受打擊之外，更被樹妖逼迫幻化成燕赤霞誘惑寧采臣。
+                                另一方面，燕赤霞也吸入妖氣，映照出內心的秘密，動搖對自己一直以來「禁欲」的信念。燕赤霞是兩人唯一的希望，此刻卻深深陷入迷惘之中……。黎明之前，他們如何面對自我，逃離這欲望迷霧？
+                                <br><br>{{locationNames37}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!--38 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site38}}"><img width="300" src="../static/images/38.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site38}}">{{title38}}</a></b>&nbsp;&nbsp;{{startDate38}}
+                            </p>
+                            <p>{{title38}}<br><br>節目簡介:
+
+                                他，暖男書呆寧采臣；她，嬌俏幽魂聶小倩；他，除妖劍客燕赤霞，詭祕難辨的蘭若寺，將他們的命運連結在一起。妖霧瀰漫中，內心慾望油然而生，他對她，是愛情還是同情？他對他，是敬畏還是渴求？
+
+                                電影《倩女幽魂》浪漫淒美的人鬼生死戀，勾勒多少癡情風月。到了戲曲舞臺，聶小倩、寧采臣、燕赤霞等人，又將變成什麼模樣？寧采臣迷途時，有好心人指引正路，像是俏皮可愛的小倩姑娘，或是任俠好義的赤霞大哥，不妙的是，正路不走偏向妖道行，分不清東南西北之際……誰能搭救他平安下山？聶小倩心儀采臣、不願他魂斷異鄉，姥姥卻一再進逼，該如何留住這份純愛。當妖霧揚起，燕赤霞內心沉睡的貪戀脫閘而出，他是否能正常發揮、頑強抵抗？
+
+                                蘭若寺內，生死一瞬……唯願君心同我心？
+                                <br><br>{{locationNames38}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 39 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site39}}"><img width="300" src="../static/images/39.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site39}}">{{title39}}</a></b>&nbsp;&nbsp;{{startDate39}}
+                            </p>
+                            <p>{{title39}}<br><br>節目簡介:
+
+                                管風琴音色豐富洪亮，足以媲美一個交響樂團，再加上樂器的稀少性，不論是作曲家的創作，或是演奏家與樂團的排練，都面臨不小的挑戰，因此管風琴的協奏曲目寥寥可數。衛武營管風琴音樂節的第三場也是壓軸音樂會，卻以前所未有的規格，大器推出三首管風琴協奏曲，以及長笛與管絃樂團、鋼琴與管絃樂團的演出，以饗愛樂大眾。
+
+                                音樂會的三首管風琴協奏曲均使用特殊的樂團編制來襯托管風琴的獨特性，浦朗克g小調管風琴協奏曲，給弦樂團及定音鼓，是最著名的管風琴協奏曲；萊因貝爾格F大調管風琴協奏曲，給弦樂團及三把法國號；皮亞佐拉《阿空加瓜山》協奏曲，則是手風琴與樂團的改編版本。此外，法朗克為鋼琴和管絃樂團創作的交響變奏曲，以及布梭尼給長笛和管絃樂團的嬉遊曲，都是音樂會少見卻別具特色的作品。五位頂尖演奏家同台競技，並由衛武營國家藝術文化中心藝術總監簡文彬親自指揮，率領高雄市立交響樂團共襄盛舉，精銳盡出，精彩可期。
+                                <br><br>{{locationNames39}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 40 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site40}}"><img width="300" src="../static/images/40.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site40}}">{{title40}}</a></b>&nbsp;&nbsp;{{startDate40}}
+                            </p>
+                            <p>{{title40}}<br><br>節目簡介:
+                                說到世界最著名男高音，大家一定會想到帕華洛帝，卡列拉斯、多明哥，但是當前我們這個世代能繼承他們鐵王座封號的就屬尤納斯．考夫曼。來自德國，被譽爲21
+                                世紀男高音天王的尤納斯．考夫曼，不但擁有沈著渾厚的男中音音質，高音更如帕華洛帝嗓音般溫潤柔美，加以他充滿爆發力的詮釋，使全世界樂迷為之神往。
+
+                                考夫曼外型英俊挺拔，除了有天籟歌喉，更有精湛的演技，為華格納歌劇男高音之首選，而無論是在紐約大都會歌劇院演出歌劇，或在全球一流的音樂廳獨唱藝術歌曲，考夫曼的巨星風采總能震懾全場。此次登臺，
+                                考夫曼將與長期合作的著名鋼琴家－赫爾穆特．多伊奇攜手為樂迷帶來完美的聽覺饗宴。
+                                <br><br>{{locationNames40}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 41 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site41}}"><img width="300" src="../static/images/41.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site41}}">{{title41}}</a></b>&nbsp;&nbsp;{{startDate41}}
+                            </p>
+                            <p>{{title41}}<br><br>節目簡介:
+                                曾被《泰唔士報》評為「奔放又炫技的演奏」，旅英馬來西亞鋼琴家傅美兒（Mei Yi
+                                Foo）長年活躍於歐陸，過去曾與BBC音樂會管絃樂團、倫敦室內樂團、赫爾辛基愛樂等樂團合作。她也積極參與當代作品演繹，在多個新音樂節上演出，包括哈德斯費爾德當代音樂節（HCMF）、漢堡新作品音樂節（Das
+                                neue Werk）等，2022衛武營國際音樂節策展人陳銀淑這樣形容她：「非常獨特的音樂家…是作曲家夢寐以求的演繹者。」
+
+                                2013年，傅美兒以首張專輯《音樂玩具》（Musical
+                                Toys）拿下《BBC音樂雜誌》最佳新進音樂家獎，並獲得德國《古典音樂》雜誌（Klassik）五星評價。在這次音樂會上，她將延續專輯挖掘當代音樂的路線，演出陳銀淑、法國作曲家梅湘、德國作曲家拉亨曼、匈牙利作曲家庫塔格之作品，展現新音樂的迷人風貌。
+                                <br><br>{{locationNames41}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 42 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site42}}"><img width="300" src="../static/images/42.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site42}}">{{title42}}</a></b>&nbsp;&nbsp;{{startDate42}}
+                            </p>
+                            <p>{{title42}}<br><br>節目簡介:
+                                「寧為信念受苦，也不願為信念殺戮」——雖然和貝多芬《命運》交響曲相似，也從c 小調寫到C
+                                大調，蕭斯塔科維契《第八號交響曲》卻不見勝利凱旋，僅是浩劫餘生。那是作曲家眼看二次大戰完全失控，家鄉列寧格勒圍城役慘至人獸相食，發自內心的怒吼哭嚎。他展現全能作曲能力，讓所有章法格式規矩都為他說話。全曲五樂章環環相扣，既寫大時代創傷，也有自傳式的體會感悟。同樣反映個人心事，他的《第一號小提琴協奏曲》則是蓄積後的凶猛爆發，冷峻中透出溫情，將不可思議的絕頂超技融於深沉內省的樂想，每次聆聽都像是借了他的真實人生。當代絃樂巨擘卡瓦科斯，將與老友呂紹嘉在臺北及衛武營二度合作。聽他們如何透過蕭斯塔科維契的眼睛看世界，在荒原裡見到人性光輝。
+                                <br><br>{{locationNames41}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 43 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site43}}"><img width="300" src="../static/images/43.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site43}}">{{title43}}</a></b>&nbsp;&nbsp;{{startDate43}}
+                            </p>
+                            <p>{{title43}}<br><br>節目簡介:
+
+                                當代最活躍的室內樂團體之一拉榭爾薩克斯風四重奏，在1969年由薩克斯風演奏家拉榭爾（S.
+                                Raschèr）與其女於美國成立。半個世紀以來，不僅傳承了自1930年代古典薩克斯風演奏的經典傳統，更積極與現代作曲家合作完成了超過三百首的委託創作。他們精湛的技巧與無懈可擊的默契被德國《世界報》（Die
+                                Welt）評為：「如果木管演奏有類似奧運的評判標準，拉榭爾四重奏絕對是金牌得主。」
+
+                                在這場音樂會中，拉榭爾四重奏以跨時代改編曲目為主軸，為聽眾帶來捷克作曲家德弗札克纏綿多情的藝術歌曲、匈牙利作曲家李蓋悌最初寫給木管五重奏的犀利短曲、美國作曲家萊許融合電子音樂的單簧管作品《紐約對位》、選自音樂之父巴赫《賦格的藝術》的三首對位作品、巴爾多克的《羅馬尼亞聖誕歌曲》等，以及義大利作曲家多納托尼特別為拉榭爾量身打造的《快》，展現出該團體風情萬種的魅力。
+                                <br><br>{{locationNames43}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 44 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site44}}"><img width="300" src="../static/images/44.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site44}}">{{title44}}</a></b>&nbsp;&nbsp;{{startDate44}}
+                            </p>
+                            <p>{{title44}}<br><br>節目簡介:
+
+                                透過音樂，我們將同時認識經典與新作。將演出林姆斯基-高沙可夫在東方風格催化下，為阿拉伯故事寫出了震攝人心、華麗與柔情的《天方夜譚》。同場還安排了作曲家多伊奇甫於2021年底首演的《給薩克斯風四重奏與管絃樂團的協奏曲》，以及本屆衛武營國際音樂節藝術總監陳銀淑的作品《突然使勁》」
+                                <br><br>{{locationNames44}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 45 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site45}}"><img width="300" src="../static/images/45.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site45}}">{{title45}}</a></b>&nbsp;&nbsp;{{startDate45}}
+                            </p>
+                            <p>{{title45}}<br><br>節目簡介:
+                                臺灣國樂團創新跨域演出，將臺北大稻埕豐富的文化資產，透過新馬戲的結合，並由黎煥雄導演執導，將帶領觀眾走進大稻埕全盛時期的時光隧道，探訪迪化街豐富多姿的歷史。
+
+                                透過國樂結合了特技舞蹈、大環、綢吊等各式馬戲，帶領觀眾一同穿梭大稻埕街市的百年時空。有魔法的列車長忙碌指揮調度著通往不同時代的旅運。當愛跨過時間的維度，嘴笨的茶樹少年和俏皮的茶花少女，緣分像連結他們手上的紅繩，穿越大街小巷。少女成了少年在世上的羈絆，為他佇足人間幾百年。當魔法列車啟動，他們的愛情重新踏上了旅程，少年追隨著少女落下的背影，他們的故事隨著大稻埕的跌宕而起落翻湧，逸出了一整座銀河，魔法繼續存在大稻埕。
+                                <br><br>{{locationNames45}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 46 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site46}}"><img width="300" src="../static/images/46.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site46}}">{{title46}}</a></b>&nbsp;&nbsp;{{startDate46}}
+                            </p>
+                            <p>{{title46}}<br><br>節目簡介:
+                                台北歌劇劇場為一歷史悠久的歌劇演出團體，由曾道雄教授於70年代所創設，旨在培訓國內優秀之聲樂人才，更與國際歌劇團體接軌，從事教育於嚴謹的歌劇製作演出。自
+                                1971首次與台北市立交響樂團推出歌劇選粹之後，半世紀以來在國內及國際間，演出歌劇達五十餘齣，包括首創之中文歌劇，其中很多是當地的首演，為拓展觀眾欣賞領域，更推出較少演出的珍貴作品。茲僅將演出之精華選粹場景，集成為一場之歌劇選粹黃金節目Opera
+                                Gala，用以紀念台北歌劇劇場五十年之演出，並與國內的愛樂者共享。
+
+                                上半場為德語系歌劇之精華場景，包括莫札特、韋伯、華格納，以及史特勞斯之歌劇代表作。下半場則為義大利、法國以及西班牙等拉丁語系歌劇，包括羅西尼、威爾第、古諾、馬斯奈、法雅，終曲則演出曾道雄親自創作之作品。
+                                <br><br>{{locationNames46}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 47 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site47}}"><img width="300" src="../static/images/47.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site47}}">{{title47}}</a></b>&nbsp;&nbsp;{{startDate47}}
+                            </p>
+                            <p>{{title47}}<br><br>節目簡介:
+                                2022高雄春天藝術節—印第安納瓊斯《法櫃奇兵》草地音樂會，將由指揮楊智欽領軍高雄市交響樂團，搭配一刀未剪數位修復全版電影放映，讓觀眾朋友再次享受開春藝文標誌性活動，在熱血激昂的現場交響樂中，跟隨永遠的印第安納瓊斯，在高美館草坡上、星空下，穿梭在秘魯叢林、尼泊爾小旅社、熱鬧喧囂的埃及開羅和納粹秘密基地，與眾人一同踏上驚心動魄的祕寶探險，尋找那傳說中的神聖「約櫃」！
+                                <br><br>{{locationNames47}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 48 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site48}}"><img width="300" src="../static/images/48.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site48}}">{{title48}}</a></b>&nbsp;&nbsp;{{startDate48}}
+                            </p>
+                            <p>{{title48}}<br><br>節目簡介:
+                                2022高雄春天藝術節”首場”廳堂音樂會，高雄市國樂團將與吳蠻首度合作，這是她首次在臺灣演出《第二琵琶協奏曲》國樂團版，此曲是中國電影掌門作曲家-趙季平為她量身打造的作品，透過「蘇州評彈」音調為主的旋律元素，展現濃郁的吳儂軟語方言特色，及江南水鄉的人文情趣和文化特點。此外更安排吳蠻集結畢生演奏經驗而譜寫的《中國繪畫：四段景》，透過四首有意境的小品來描繪她腦海中的家鄉景象，將首度以「彈撥樂合奏」形式來呈現。
+                                <br><br>{{locationNames48}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 49 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site49}}"><img width="300" src="../static/images/49.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site49}}">{{title49}}</a></b>&nbsp;&nbsp;{{startDate49}}
+                            </p>
+                            <p>{{title49}}<br><br>節目簡介:
+                                《寶島妖怪佇佗位？》為了每隻妖怪都量身譜曲，全新的國樂編曲搭配可愛逗趣的繪本插畫，再加上說書人生動表演的引導，讓人可以開心暢遊妖怪世界，輕鬆無負擔的喚回文化記憶。
+
+                                除了可聆聽在這片土地上已流傳多年的傳說故事，這場音樂繪又添加了新的想像，絕對會讓人對這些在許久許久以前，就以某種方式陪伴我們的「另類住民」留下難忘的深刻新印象。
+                                <br><br>{{locationNames49}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- 50 -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{site50}}"><img width="300" src="../static/images/50.jpg"></a>
+                        </td>
+                        <td>
+                            <p><b><a href="{{site50}}">{{title50}}</a></b>&nbsp;&nbsp;{{startDate50}}
+                            </p>
+                            <p>{{title50}}<br><br>節目簡介:
+
+                                小火車的特別任務
+
+                                勇敢是，「帶著害怕前進」
+
+                                勇敢是，「不對自己說不可能」
+
+                                小火車卡爾是咕咕鎮的貨運火車
+
+                                今天貨運站來了一位神秘的客人，交付一項特別任務
+
+                                吱嘎怪響的森林、黑漆漆的隧道、又高又長的跨海大橋……
+
+                                他來順利通過，並完成任務嗎?
+
+                                2022高雄春天藝術節親子音樂會，繼2021《阿里巴巴與四十大盜》親子音樂會受到爸爸、媽媽以及小朋友們的喜愛；今年高雄市交響樂團將與台灣兒童繪本創作天王-賴馬，再度攜手合作共同譜出經典著作《勇敢小火車：耶誕老公公的夏日旅行》，透過樂曲，用繪本的魔幻色彩與交響音符的演奏，帶領小朋友們來一趟勇敢的夏日旅程。
+                                <br><br>{{locationNames50}}<br><br>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
 
 </html>
