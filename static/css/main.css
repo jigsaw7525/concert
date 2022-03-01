@@ -6,8 +6,7 @@ h1 {
 
 #all{
     color: #404040;
-    margin: 10px auto;
-    padding: 0;
+    margin: 1px auto;
     width: 70%;
 }
 
@@ -33,7 +32,7 @@ body {
     margin: 0 0 5px;
     padding: 1px 0 0;
     text-align: left;
-    width: 750px;
+    width: 65%;
     
 }
 
@@ -51,11 +50,15 @@ table {
     
 }
 
+.pic{
+    width: 10%;
+}
 
 tr {
     display: table-row;
     vertical-align: inherit;
     border-color: inherit;
+    width: 70%;
 }
 a {
     color: #4088b8;
@@ -67,6 +70,7 @@ a {
 td {
     display: table-cell;
     vertical-align: inherit;
+    width:auto;
 }
 
 
